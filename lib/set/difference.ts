@@ -1,17 +1,17 @@
 /**
- * Difference between two Sets
+ * Difference between two Iterables
  */
-export function difference<T>(a: Set<T>, b: Iterable<T>): Set<T> {
+export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T> {
   const result = new Set(a);
   for (const elem of b) result.delete(elem);
   return result;
 }
 
 /**
- * Difference between n Sets
+ * Difference between n Iterables
  */
 export function differenceMany<T>(
-  main: Set<T>,
+  main: Iterable<T>,
   sets: Iterable<Iterable<T>>,
 ): Set<T> {
   const result = new Set(main);

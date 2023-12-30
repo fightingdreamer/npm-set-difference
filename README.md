@@ -2,7 +2,7 @@
 
 ## Description
 
-Missing difference operation for Set.
+Missing difference operation for Set or any Iterable.
 
 Second implementation can do difference operation between any number of iterables.
 
@@ -75,10 +75,10 @@ for (const value of expect) {
 ## Functions
 
 ```js
-function difference<T>(a: Set<T>, b: Iterable<T>): Set<T>
+function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T>
 ```
 
-Will apply difference operation between Set and Iterable.
+Will apply difference operation between Iterable and Iterable.
 
 ```js
 function differenceMany<T>(main: Iterable<T>, sets: Iterable<Iterable<T>>): Set<T>
